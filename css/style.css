@@ -1,0 +1,122 @@
+body{ 
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+* { 
+  box-sizing: border-box;
+}
+:root { 
+  --background-color: #151515;
+  --border-color: #301B3F;
+  --main-color: #3C415C;
+  --secondary-color: #B4A5A5;
+}
+.container { 
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media(min-width: 767px) { 
+  .container { 
+    width: 750px;
+  }
+}
+@media(min-width: 992px) { 
+  .container { 
+    width: 950px;
+  }
+}
+@media(min-width: 1200px) { 
+  .container { 
+    width: 1150px;
+  }
+}
+.header { 
+  padding-top: 20px;
+  min-height: 50px;
+}
+.header .container {
+  display: flex;
+  
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media(max-width: 768px) { 
+  .header .container {
+    flex-direction: column ;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.header .container input[type="text"] { 
+  padding: 10px 20px 10px 5px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: var(--main-color);
+}
+.header .container input[type="text"]::placeholder {
+  text-align: right;
+}
+@media(max-width: 768px) { 
+  .header .container input[type="text"] {
+    padding: 5px 10px 5px 5px;
+    font-size: .7rem;
+  }
+}
+.header .container input[type="text"]:focus { 
+  transition: 0.7s;
+  box-shadow: 0 0 15px 4px var(--border-color);
+}
+.header .container button { 
+  color: white;
+  background-color: var(--border-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+.header .container button.clicked { 
+  background-color: var(--secondary-color);
+}
+@media(max-width: 768px) { 
+  .header .container button { 
+    font-size: .7rem;
+    padding: 5px 10px;
+  }
+}
+.show { 
+  height: calc(100vh - 50px);
+}
+@media(max-width: 768px) { 
+  .show { 
+    height: calc(100vh - 147px);
+  }
+}
+.show .container{ 
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+.show .container span {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.show .container p  { 
+  color: var(--border-color);
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.show .container .error { 
+  color: red;
+  font-size: .8rem;
+  margin-top: 50px;
+  text-align: center;
+}
